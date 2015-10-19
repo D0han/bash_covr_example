@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -f /tmp/foobar ] ; then
+    echo "found /tmp/foobar file"
+else
+    echo "warning! couldn't find /tmp/foobar file"
+    echo "will be created manually..."
+    >/tmp/foobar
+    readlink -f /tmp/foobar 
+fi
+echo "done"
+

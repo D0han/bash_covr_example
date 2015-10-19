@@ -29,9 +29,9 @@ echo "starting tests, please wait..."
 time {
     rm -rf ${OUT_DIR} && mkdir ${OUT_DIR}
     >${OUT_DIR}/coverage_results.csv
-    for f in test_functions1.sh test_functions2.sh ; do
+    for f in test_functions1.sh test_functions2.sh test_script1.sh ; do
         ${KCOV_BIN} \
-            --exclude-path=assert.sh,test_functions1.sh,test_functions2.sh,all_tests.sh \
+            --exclude-path=assert.sh,test_functions1.sh,test_functions2.sh,test_script1.sh \
             --exclude-pattern=mocks/ \
             ${OUT_DIR}/ \
             ${f} \

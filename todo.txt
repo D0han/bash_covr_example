@@ -1,8 +1,10 @@
 todo:
-- src: test for simple script without functions
+- src: tests for env variables
+- src: tests for nested scripts
 - doc: all
 
 
 done:
 + src: multi-functions example
++ src: test for simple script without functions
 
