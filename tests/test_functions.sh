@@ -21,23 +21,23 @@ DONE"
 assert "print_msg ''" \
 "empty string"
 
-assert "file_stats 'test_data/file01.txt'" \
-"test_data/file01.txt stats:
+assert "file_stats 'test_data/file_stats/file01.txt'" \
+"test_data/file_stats/file01.txt stats:
 lines: 3
 size: 10 (bytes)"
 
-assert "file_stats 'test_data/file02.txt'" \
-"test_data/file02.txt stats:
+assert "file_stats 'test_data/file_stats/file02.txt'" \
+"test_data/file_stats/file02.txt stats:
 lines: 0
 size: 0 (bytes)"
 
-assert "file_stats 'test_data/file03.txt'" \
-"test_data/file03.txt stats:
+assert "file_stats 'test_data/file_stats/file03.txt'" \
+"test_data/file_stats/file03.txt stats:
 lines: 1
 size: 1 (bytes)"
 
-assert "file_stats 'test_data/file04.txt'" \
-"test_data/file04.txt stats:
+assert "file_stats 'test_data/file_stats/file04.txt'" \
+"test_data/file_stats/file04.txt stats:
 lines: 11
 size: 45 (bytes)"
 
