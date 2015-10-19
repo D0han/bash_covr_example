@@ -8,6 +8,7 @@ function print_msg() {
         echo "MSG=${MSG}"
         echo "DONE"
     fi
+    return 0
 }
 
 
@@ -25,6 +26,7 @@ function log() {
         echo "error! unsupported value for DEBUG param: DEBUG=\"${DEBUG}\""
         return 1
     fi
+    return 0
 }
 
 
@@ -37,7 +39,4 @@ function file_stats() {
     echo "lines: ${LINES}"
     echo "size: ${BYTES} (bytes)"
 }
-
-
-
 
