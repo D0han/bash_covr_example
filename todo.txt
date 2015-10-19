@@ -1,9 +1,8 @@
 todo:
 - src: test for simple script without functions
-- src: multi-functions example
 - doc: all
 
 
 done:
-+
++ src: multi-functions example
 
