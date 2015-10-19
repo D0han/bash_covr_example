@@ -4,9 +4,6 @@ readonly SIUTE_NAME="${SRC_FILE} test siute"
 #source bash test framework
 . assert.sh
 
-#source file to be tested
-#. ../${SRC_FILE}
-
 
 
 
