@@ -1,3 +1,4 @@
 https://github.com/lehmannro/assert.sh
 https://github.com/SimonKagstrom/kcov
+http://www.shellcheck.net
 
