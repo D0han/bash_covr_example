@@ -7,30 +7,6 @@
 
 
 
-function usage() {
-    echo "Type 'svn help' for usage."
-}
-
-
-
-
-function help() {
-    echo "help..."
-}
-
-
-
-
-function unknown_subcmd() {
-    local readonly subcmd=${1}
-
-    echo "Unknown subcommand: '${subcmd}'"
-    usage
-}
-
-
-
-
 function version() {
     echo "svn, version 1.8.10 (r1615264)
    compiled Aug 12 2014, 03:40:51 on x86_64-unknown-linux-gnu
@@ -52,7 +28,52 @@ The following repository access (RA) modules are available:
   - handles 'http' scheme
   - handles 'https' scheme
 "
-return 0
+    return 0
+}
+
+
+
+
+function usage() {
+    echo "Type 'svn help' for usage."
+}
+
+
+
+
+function help() {
+    echo "help..."
+}
+
+
+
+
+function info() {
+    echo "Path: .
+Working Copy Root Path: /home/brand0m/bash_covr_example_svn
+URL: https://github.com/brand0m/bash_covr_example
+Relative URL: ^/
+Repository Root: https://github.com/brand0m/bash_covr_example
+Repository UUID: a1e7b279-acb7-1a1a-8285-ce57b7db7bff
+Revision: 6
+Node Kind: directory
+Schedule: normal
+Last Changed Author: brand0m
+Last Changed Rev: 6
+Last Changed Date: 2015-10-19 16:25:31 +0200 (Mon, 19 Oct 2015)
+"
+    return 0
+}
+
+
+
+
+function unknown_subcmd() {
+    local readonly subcmd=${1}
+
+    echo "Unknown subcommand: '${subcmd}'"
+    usage
+    return 1
 }
 
 
@@ -69,6 +90,8 @@ function main() {
             version
         elif [ "${1}" = "--help" ] ; then
             help
+        elif [ "${1}" = "info" ] ; then
+            info
         else
             unknown_subcmd "${1}"
         fi

@@ -28,14 +28,24 @@ fi
 echo "starting tests, please wait..."
 time {
     rm -rf ${OUT_DIR}
-    ${KCOV_BIN} --exclude-path=assert.sh,test_functions1.sh ${OUT_DIR}/ test_functions1.sh --stop --verbose
+    for f in test_functions1.sh test_functions2.sh ; do
+        ${KCOV_BIN} \
+            --exclude-path=assert.sh,test_functions1.sh,test_functions2.sh,all_tests.sh \
+            --exclude-pattern=mocks/ \
+            ${OUT_DIR}/ \
+            ${f} \
+            --stop \
+            --verbose
 
-    #if no error then show coverage value
-    if [ $? -eq 0 ] ; then
-        COVERAGE=$(cat ${OUT_DIR}/index.json | grep -o "\"covered\":\"[0-9\.]*\"" | tr -d '"' | sed 's/:/: /g')
-        echo "${COVERAGE}%"
-    else
-        exit 1
-    fi
+        #if no error then show coverage value
+        if [ $? -eq 0 ] ; then
+            COVERAGE=$(cat ${OUT_DIR}/index.json | grep -o "\"covered\":\"[0-9\.]*\"" | tr -d '"' | sed 's/:/: /g')
+            echo "${COVERAGE}%"
+        else
+            exit 1
+        fi
+    done
 }
+
+exit 0
 
