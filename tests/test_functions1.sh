@@ -1,4 +1,4 @@
-readonly SRC_FILE="functions.sh"
+readonly SRC_FILE="functions1.sh"
 readonly SIUTE_NAME="${SRC_FILE} test siute"
 
 #source bash test framework
@@ -10,7 +10,7 @@ readonly SIUTE_NAME="${SRC_FILE} test siute"
 
 
 
-#start tests for functions.sh file
+#start tests for functions1.sh file
 echo -e "\nstarting \"${SIUTE_NAME}\""
 
 assert "print_msg 'xxx'" \

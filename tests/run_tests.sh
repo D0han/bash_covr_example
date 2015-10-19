@@ -25,10 +25,10 @@ else
     echo "'assert.sh' already downloaded"
 fi
 
-echo "running UTs, please wait..."
+echo "starting tests, please wait..."
 time {
     rm -rf ${OUT_DIR}
-    ${KCOV_BIN} --exclude-path=assert.sh,test_functions.sh ${OUT_DIR}/ test_functions.sh --stop --verbose
+    ${KCOV_BIN} --exclude-path=assert.sh,test_functions1.sh ${OUT_DIR}/ test_functions1.sh --stop --verbose
 
     #if no error then show coverage value
     if [ $? -eq 0 ] ; then
