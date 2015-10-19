@@ -6,7 +6,7 @@ readonly OUT_DIR="results"
 readonly CWD=$(pwd)
 
 #in case kcov is manually added to current dir
-PATH=${PATH}:${PWD}
+PATH=${PATH}:${PWD}/kcov
 
 
 echo "searching for 'kcov' tool in the system, please wait..."
