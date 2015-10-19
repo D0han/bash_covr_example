@@ -5,7 +5,7 @@ if [ -f /tmp/foobar ] ; then
 else
     echo "warning! couldn't find /tmp/foobar file"
     echo "will be created manually..."
-    >/tmp/foobar
+    touch /tmp/foobar
     readlink -f /tmp/foobar 
 fi
 echo "done"
