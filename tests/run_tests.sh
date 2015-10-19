@@ -27,7 +27,8 @@ fi
 
 echo "starting tests, please wait..."
 time {
-    rm -rf ${OUT_DIR}
+    rm -rf ${OUT_DIR} && mkdir ${OUT_DIR}
+    >${OUT_DIR}/coverage_results.csv
     for f in test_functions1.sh test_functions2.sh ; do
         ${KCOV_BIN} \
             --exclude-path=assert.sh,test_functions1.sh,test_functions2.sh,all_tests.sh \
@@ -39,12 +40,18 @@ time {
 
         #if no error then show coverage value
         if [ $? -eq 0 ] ; then
-            COVERAGE=$(cat ${OUT_DIR}/index.json | grep -o "\"covered\":\"[0-9\.]*\"" | tr -d '"' | sed 's/:/: /g')
-            echo "${COVERAGE}%"
+            COVR=$(grep -o "${f}.*\"covered\":\"[0-9\.]*\"" ${OUT_DIR}/index.json | sed 's/.*"covered":"\([0-9\.]*\)".*/\1/g')
+            echo "covered: ${COVR}%"
+            echo "${f},${COVR}%">>${OUT_DIR}/coverage_results.csv
         else
             exit 1
         fi
     done
+    COVR_TOTAL=$(grep -o "merged_files.*\"covered\":\"[0-9\.]*\"" ${OUT_DIR}/index.json | sed 's/.*"covered":"\([0-9\.]*\)".*/\1/g')
+    echo "total,${COVR_TOTAL}%">>${OUT_DIR}/coverage_results.csv
+    echo
+    echo "coverage results:"
+    cat ${OUT_DIR}/coverage_results.csv
 }
 
 exit 0
