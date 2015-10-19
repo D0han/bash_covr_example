@@ -11,7 +11,7 @@ PATH=${PATH}:${PWD}/kcov
 
 echo "searching for 'kcov' tool in the system, please wait..."
 readonly KCOV_BIN=$(which kcov 2>/dev/null)
-if [ -z ${KCOV_BIN} ] ; then
+if [ -z "${KCOV_BIN}" ] ; then
     echo "error! 'kcov' tool not found!"
     exit 1
 else

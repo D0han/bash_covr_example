@@ -33,8 +33,8 @@ function log() {
 function file_stats() {
     local readonly FILE_NAME=${1}
 
-    LINES=$(wc -l ${FILE_NAME} | cut -d" " -f1)
-    BYTES=$(wc -c ${FILE_NAME} | cut -d" " -f1)
+    LINES=$(wc -l "${FILE_NAME}" | cut -d" " -f1)
+    BYTES=$(wc -c "${FILE_NAME}" | cut -d" " -f1)
     echo "${FILE_NAME} stats:"
     echo "lines: ${LINES}"
     echo "size: ${BYTES} (bytes)"
