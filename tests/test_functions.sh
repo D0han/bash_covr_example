@@ -1,7 +1,7 @@
 readonly SRC_FILE="functions.sh"
-readonly UT_SIUTE_NAME="${SRC_FILE} UT siute"
+readonly SIUTE_NAME="${SRC_FILE} test siute"
 
-#source bash UT framework
+#source bash test framework
 . assert.sh
 
 #source file to be tested
@@ -10,8 +10,8 @@ readonly UT_SIUTE_NAME="${SRC_FILE} UT siute"
 
 
 
-#start UTs for 
-echo -e "\nstarting \"${UT_SIUTE_NAME}\""
+#start tests for functions.sh file
+echo -e "\nstarting \"${SIUTE_NAME}\""
 
 assert "print_msg 'xxx'" \
 "STARTED
@@ -35,6 +35,11 @@ assert "file_stats 'test_data/file03.txt'" \
 "test_data/file03.txt stats:
 lines: 1
 size: 1 (bytes)"
+
+assert "file_stats 'test_data/file04.txt'" \
+"test_data/file04.txt stats:
+lines: 11
+size: 45 (bytes)"
 
 assert "file_stats 'xxx' 2>&1" \
 "wc: xxx: No such file or directory
@@ -63,7 +68,7 @@ assert "log 'example debug msg' 'DEBUG' 'ADDITIONAL_PARAM'" \
 
 
 
-#end UTs suite
-echo -e "\ndone ${UT_SIUTE_NAME}"
-assert_end \"${UT_SIUTE_NAME}\"
+#end test suite
+echo -e "\ndone ${SIUTE_NAME}"
+assert_end \"${SIUTE_NAME}\"
 
