@@ -19,8 +19,8 @@ echo -e "\nstarting \"${SIUTE_NAME}\""
 assert "svn_parse_revision 'https://github.com/brand0m/bash_covr_example'" \
 "6"
 
-
-#assert_raises "log 'testing unsupported debug param'" 1 ""
+assert "svn_parse_revision ''" \
+"error! an empty url: URL=\"\""
 
 
 
