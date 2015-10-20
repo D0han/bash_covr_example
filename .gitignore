@@ -1,0 +1,4 @@
+tests/assert.sh
+tests/kcov/kcov
+tests/results/
+
