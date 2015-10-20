@@ -6,7 +6,7 @@ readonly OUT_DIR="results"
 readonly CWD=$(pwd)
 readonly ASSERT_SH_VER="v1.1"
 
-#in case kcov is manually added to current dir
+#in case kcov is manually added to kcov/ dir
 PATH=${PATH}:${PWD}/kcov
 
 
