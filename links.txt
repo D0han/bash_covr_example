@@ -1,4 +1,5 @@
-https://github.com/lehmannro/assert.sh
-https://github.com/SimonKagstrom/kcov
 http://www.shellcheck.net
+https://github.com/SimonKagstrom/kcov
+https://github.com/lehmannro/assert.sh
+https://google-styleguide.googlecode.com/svn/trunk/shell.xml
 

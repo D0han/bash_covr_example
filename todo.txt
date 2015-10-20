@@ -1,6 +1,9 @@
 todo:
 - src: tests for env variables
 - src: tests for nested scripts
+- src: cli parser example
+- src: readme.txt file is missing
+- src: license file is missing as well
 - doc: all
 
 

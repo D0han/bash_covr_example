@@ -1,2 +1,2 @@
-put here kcov executables
+put here kcov executables and its dependencies
 
