@@ -5,8 +5,6 @@
 #simple stupid svn (compatible with 1.8.10 version) mock
 
 
-
-
 function version() {
     echo "svn, version 1.8.10 (r1615264)
    compiled Aug 12 2014, 03:40:51 on x86_64-unknown-linux-gnu
@@ -32,13 +30,9 @@ The following repository access (RA) modules are available:
 }
 
 
-
-
 function usage() {
     echo "Type 'svn help' for usage."
 }
-
-
 
 
 function help() {
@@ -98,8 +92,6 @@ For additional information, see http://subversion.apache.org/
 }
 
 
-
-
 function info() {
     echo "Path: .
 Working Copy Root Path: /home/brand0m/bash_covr_example_svn
@@ -118,8 +110,6 @@ Last Changed Date: 2015-10-19 16:25:31 +0200 (Mon, 19 Oct 2015)
 }
 
 
-
-
 function unknown_subcmd() {
     local readonly subcmd=${1}
 
@@ -127,8 +117,6 @@ function unknown_subcmd() {
     usage
     return 1
 }
-
-
 
 
 function main() {

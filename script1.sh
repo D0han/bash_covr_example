@@ -1,4 +1,6 @@
 #!/bin/bash
+#set -x
+
 
 if [ -f /tmp/foobar ] ; then
     echo "found /tmp/foobar file"
