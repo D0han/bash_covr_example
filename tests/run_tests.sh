@@ -4,6 +4,7 @@
 
 readonly OUT_DIR="results"
 readonly CWD=$(pwd)
+readonly ASSERT_SH_VER="v1.1"
 
 #in case kcov is manually added to current dir
 PATH=${PATH}:${PWD}/kcov
@@ -18,9 +19,9 @@ else
     echo "found 'kcov' tool -> KCOV_BIN=${KCOV_BIN}"
 fi
 
-echo "downloading 'assert.sh' framework (v1.1), please wait..."
+echo "downloading 'assert.sh' framework (${ASSERT_SH_VER}), please wait..."
 if ! [ -f assert.sh ] ; then
-    wget https://raw.githubusercontent.com/lehmannro/assert.sh/v1.1/assert.sh -O assert.sh
+    wget https://raw.githubusercontent.com/lehmannro/assert.sh/${ASSERT_SH_VER}/assert.sh -O assert.sh
 else
     echo "'assert.sh' already downloaded"
 fi
