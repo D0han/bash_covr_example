@@ -14,39 +14,22 @@ readonly SIUTE_NAME="${SRC_FILE} test siute"
 echo -e "\nstarting \"${SIUTE_NAME}\""
 
 assert "print_msg 'xxx'" \
-"STARTED
-MSG=xxx
-DONE"
+"STARTED\nMSG=xxx\nDONE"
 
 assert "print_msg ''" \
 "empty string"
 
 assert "file_stats 'test_data/functions1/file_stats/file01.txt'" \
-"test_data/functions1/file_stats/file01.txt stats:
-lines: 3
-size: 10 (bytes)"
+"test_data/functions1/file_stats/file01.txt stats:\nlines: 3\nsize: 10 (bytes)"
 
 assert "file_stats 'test_data/functions1/file_stats/file02.txt'" \
-"test_data/functions1/file_stats/file02.txt stats:
-lines: 0
-size: 0 (bytes)"
+"test_data/functions1/file_stats/file02.txt stats:\nlines: 0\nsize: 0 (bytes)"
 
 assert "file_stats 'test_data/functions1/file_stats/file03.txt'" \
-"test_data/functions1/file_stats/file03.txt stats:
-lines: 1
-size: 1 (bytes)"
+"test_data/functions1/file_stats/file03.txt stats:\nlines: 1\nsize: 1 (bytes)"
 
 assert "file_stats 'test_data/functions1/file_stats/file04.txt'" \
-"test_data/functions1/file_stats/file04.txt stats:
-lines: 11
-size: 45 (bytes)"
-
-assert "file_stats 'xxx' 2>&1" \
-"wc: xxx: No such file or directory
-wc: xxx: No such file or directory
-xxx stats:
-lines: 
-size:  (bytes)"
+"test_data/functions1/file_stats/file04.txt stats:\nlines: 11\nsize: 45 (bytes)"
 
 assert "log 'example debug msg' 'DEBUG'" \
 "DEBUG: MSG=example debug msg"

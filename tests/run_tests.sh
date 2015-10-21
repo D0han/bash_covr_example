@@ -32,7 +32,7 @@ time {
     >${OUT_DIR}/coverage_results.csv
     for f in test_functions1.sh test_functions2.sh test_script1.sh ; do
         ${KCOV_BIN} \
-            --exclude-path=assert.sh,test_functions1.sh,test_functions2.sh,test_script1.sh \
+            --exclude-path=assert.sh \
             --exclude-pattern=mocks/ \
             ${OUT_DIR}/ \
             ${f} \

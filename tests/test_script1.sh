@@ -10,17 +10,14 @@ readonly SIUTE_NAME="${SRC_FILE} test siute"
 #start tests for script1.sh file
 echo -e "\nstarting \"${SIUTE_NAME}\""
 
->/tmp/foobar
+rm -f /tmp/foobar
+touch /tmp/foobar
 assert "bash ../script1.sh" \
-"found /tmp/foobar file
-done"
+"found /tmp/foobar file\ndone"
 
 rm -f /tmp/foobar
 assert "bash ../script1.sh" \
-"warning! couldn't find /tmp/foobar file
-will be created manually...
-/tmp/foobar
-done"
+"warning! couldn't find /tmp/foobar file\nwill be created manually...\n/tmp/foobar\ndone"
 
 
 
