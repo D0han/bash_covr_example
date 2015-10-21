@@ -1,4 +1,5 @@
 todo:
+- src: add travis-ci integration
 - src: tests for env variables
 - src: tests for nested scripts
 - src: cli parser example
