@@ -21,7 +21,7 @@ fi
 
 echo "downloading 'assert.sh' framework (${ASSERT_SH_VER}), please wait..."
 if ! [ -f assert.sh ] ; then
-    wget https://raw.githubusercontent.com/lehmannro/assert.sh/${ASSERT_SH_VER}/assert.sh -O assert.sh
+    wget --no-check-certificate https://raw.githubusercontent.com/lehmannro/assert.sh/${ASSERT_SH_VER}/assert.sh -O assert.sh
 else
     echo "'assert.sh' already downloaded"
 fi
