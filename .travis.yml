@@ -2,7 +2,7 @@ language: bash
 
 before_script:
   - cd tests/
-  - wget --no-check-certificate https://raw.githubusercontent.com/lehmannro/assert.sh//assert.sh -O assert.sh
+  - wget --no-check-certificate https://raw.githubusercontent.com/lehmannro/assert.sh/v1.1/assert.sh -O assert.sh
 
 script:
   - cd tests/
