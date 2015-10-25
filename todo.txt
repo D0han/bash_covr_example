@@ -1,4 +1,5 @@
 todo:
+- src: more advanced travis-ci support
 - src: assert.sh skip example
 - src: tests for env variables
 - src: tests for nested scripts
