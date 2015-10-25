@@ -1,5 +1,5 @@
 todo:
-- src: add travis-ci integration
+- src: assert.sh skip example
 - src: tests for env variables
 - src: tests for nested scripts
 - src: cli parser example
@@ -11,4 +11,5 @@ todo:
 done:
 + src: multi-functions example
 + src: test for simple script without functions
++ src: add travis-ci integration
 
