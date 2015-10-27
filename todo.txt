@@ -1,4 +1,5 @@
 todo:
+- src: extracting merged coverage results 
 - src: handling stderr
 - src: assert.sh skip_if example
 - src: tests for env variables
@@ -6,6 +7,7 @@ todo:
 - src: cli parser example
 - src: license file is missing as well
 - doc: all
+- doc: how to browse merged coverage results
 
 
 done:
