@@ -1,3 +1,7 @@
+#!/bin/bash
+#set -x
+
+
 readonly SRC_FILE="functions2.sh"
 readonly SIUTE_NAME="${SRC_FILE} test siute"
 
