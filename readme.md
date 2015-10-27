@@ -1,9 +1,9 @@
-bash_covr_example
------------------
-
 TOC
+---
+
 
 About
+
 Requirements
 
 ----
@@ -23,5 +23,6 @@ Requirements
 
 
 travis-ci status for bash_covr_example:
+
 [![Build Status](https://travis-ci.org/brand0m/bash_covr_example.png?branch=master)](https://travis-ci.org/brand0m/bash_covr_example)
 
