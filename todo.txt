@@ -3,7 +3,6 @@ todo:
 - src: tests for env variables
 - src: tests for nested scripts
 - src: cli parser example
-- src: readme.txt file is missing
 - src: license file is missing as well
 - doc: all
 
@@ -14,4 +13,5 @@ done:
 + src: add travis-ci integration
 + src: more advanced travis-ci support
 + src: assert.sh skip example
++ src: some readme file is missing
 
