@@ -12,8 +12,6 @@ readonly SIUTE_NAME="${SRC_FILE} test siute"
 . ../${SRC_FILE}
 
 
-readonly PID=$$
-
 
 
 #start tests for functions1.sh file
