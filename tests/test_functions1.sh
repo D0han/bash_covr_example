@@ -55,7 +55,7 @@ assert "log 'example warning msg' 'WARNING'" \
 assert "log 'example error msg' 'ERROR'" \
 "\x1b[31mERROR:\x1b[0m MSG=example error msg"
 
-assert "log 'testing unsupported debug param' 'CRITICAL' 2>tmp/${PID}.log.stderr.txt ; cat tmp/${PID}.log.stderr.txt" \
+assert "log 'testing unsupported debug param' 'CRITICAL'" \
 "error! unsupported value for DEBUG param: DEBUG=\"CRITICAL\""
 
 assert_raises "log 'testing unsupported debug param'" 1 ""
