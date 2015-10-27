@@ -3,6 +3,7 @@ function print_msg() {
 
     if [ "${MSG}" = "" ] ; then
         echo "empty string"
+        return 1
     else
         echo "STARTED"
         echo "MSG=${MSG}"

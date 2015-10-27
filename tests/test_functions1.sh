@@ -12,6 +12,8 @@ readonly SIUTE_NAME="${SRC_FILE} test siute"
 . ../${SRC_FILE}
 
 
+readonly PID=$$
+
 
 
 #start tests for functions1.sh file
@@ -22,6 +24,15 @@ assert "print_msg 'xxx'" \
 
 assert "print_msg ''" \
 "empty string"
+
+assert_raises "print_msg ''" \
+1
+
+assert_raises "print_msg 'abc'" \
+0
+
+skip assert_raises "print_msg '\n'" \
+???
 
 assert "file_stats 'test_data/functions1/file_stats/file01.txt'" \
 "test_data/functions1/file_stats/file01.txt stats:\nlines: 3\nsize: 10 (bytes)"
@@ -44,7 +55,7 @@ assert "log 'example warning msg' 'WARNING'" \
 assert "log 'example error msg' 'ERROR'" \
 "\x1b[31mERROR:\x1b[0m MSG=example error msg"
 
-assert "log 'testing unsupported debug param' 'CRITICAL'" \
+assert "log 'testing unsupported debug param' 'CRITICAL' 2>tmp/${PID}.log.stderr.txt ; cat tmp/${PID}.log.stderr.txt" \
 "error! unsupported value for DEBUG param: DEBUG=\"CRITICAL\""
 
 assert_raises "log 'testing unsupported debug param'" 1 ""
