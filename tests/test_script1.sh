@@ -16,11 +16,11 @@ echo -e "\nstarting \"${SIUTE_NAME}\""
 
 rm -f /tmp/foobar
 touch /tmp/foobar
-assert "bash ../script1.sh" \
+assert "../script1.sh" \
 "found /tmp/foobar file\ndone"
 
 rm -f /tmp/foobar
-assert "bash ../script1.sh" \
+assert "../script1.sh" \
 "warning! couldn't find /tmp/foobar file\nwill be created manually...\n/tmp/foobar\ndone"
 
 
