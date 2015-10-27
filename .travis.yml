@@ -1,9 +1,6 @@
 language: bash
 
-before_script:
-  - cd tests/
-  - wget --no-check-certificate https://raw.githubusercontent.com/lehmannro/assert.sh/v1.1/assert.sh -O assert.sh
-
 script:
-  - bash travis.sh
+  - cd tests/
+  - bash run_tests.sh
 
