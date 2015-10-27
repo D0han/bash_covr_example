@@ -26,7 +26,7 @@ else
     echo "'assert.sh' already downloaded"
 fi
 
-echo "starting tests, please wait..."
+echo "counting code coverage, please wait..."
 time {
     rm -rf ${OUT_DIR} && mkdir ${OUT_DIR}
     >${OUT_DIR}/coverage_results.csv
