@@ -7,7 +7,7 @@ readonly CWD=$(pwd)
 readonly ASSERT_SH_VER="v1.1"
 
 #in case kcov is manually added to kcov/ dir
-PATH=${PATH}:${PWD}/kcov
+PATH=${PATH}:${CWD}/kcov
 
 
 echo "searching for 'kcov' tool in the system, please wait..."
