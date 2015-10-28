@@ -1,9 +1,10 @@
 #!/bin/bash
 #set -x
+set -e
 
 
-readonly OUT_DIR="results"
 readonly CWD=$(pwd)
+readonly OUT_DIR="${CWD}/results"
 readonly ASSERT_SH_VER="v1.1"
 
 #in case kcov is manually added to kcov/ dir
@@ -29,19 +30,20 @@ fi
 echo "counting code coverage, please wait..."
 time {
     rm -rf ${OUT_DIR} && mkdir ${OUT_DIR}
-    >${OUT_DIR}/coverage_results.csv
+    touch ${OUT_DIR}/coverage_results.csv
     for f in test_functions1.sh test_functions2.sh test_script1.sh ; do
         echo "running kcov for ${f} file, please wait..."
         ${KCOV_BIN} \
             --exclude-path=assert.sh,${f} \
-            --exclude-pattern=mocks/ \
+            --exclude-pattern=${CWD}/mocks/ \
             ${OUT_DIR}/ \
-            ${f} \
+            ${CWD}/${f} \
             --stop \
             --verbose
 
         #if no error then show coverage value
         if [ $? -eq 0 ] ; then
+            cat ${OUT_DIR}/index.json
             COVR=$(grep -o "${f}.*\"covered\":\"[0-9\.]*\"" ${OUT_DIR}/index.json | sed 's/.*"covered":"\([0-9\.]*\)".*/\1/g')
             echo "covered: ${COVR}%"
             echo "${f},${COVR}%">>${OUT_DIR}/coverage_results.csv
