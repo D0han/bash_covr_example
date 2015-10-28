@@ -32,9 +32,9 @@ time {
     rm -rf ${OUT_DIR} && mkdir ${OUT_DIR}
     touch ${OUT_DIR}/coverage_results.csv
     for f in test_functions1.sh test_functions2.sh test_script1.sh ; do
-        echo "running kcov for ${f} file, please wait..."
+        echo "running kcov for ${CWD}/${f} file, please wait..."
         ${KCOV_BIN} \
-            --exclude-path=assert.sh,${f} \
+            --exclude-path=${CWD}/assert.sh,${CWD}/${f} \
             --exclude-pattern=${CWD}/mocks/ \
             ${OUT_DIR}/ \
             ${CWD}/${f} \
