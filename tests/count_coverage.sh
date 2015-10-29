@@ -4,7 +4,7 @@ set -e
 
 
 readonly CWD=$(pwd)
-readonly OUT_DIR="${CWD}/results"
+readonly OUT_DIR="${CWD}/coverage_results"
 readonly ASSERT_SH_VER="v1.1"
 
 #in case kcov is manually added to kcov/ dir
