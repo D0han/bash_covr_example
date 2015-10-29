@@ -3,7 +3,7 @@
 
 
 readonly SRC_FILE="functions2.sh"
-readonly SIUTE_NAME="${SRC_FILE} test siute"
+readonly SIUTE_NAME="test_${SRC_FILE} test siute"
 
 #source bash test framework
 . assert.sh
