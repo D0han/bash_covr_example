@@ -3,7 +3,7 @@
 
 
 readonly SRC_FILE="functions1.sh"
-readonly SIUTE_NAME="test_${SRC_FILE} test siute"
+readonly SUITE_NAME="test_${SRC_FILE} test suite"
 
 #source bash test framework
 . assert.sh
@@ -15,7 +15,7 @@ readonly SIUTE_NAME="test_${SRC_FILE} test siute"
 
 
 #start tests for functions1.sh file
-echo -e "\nstarting \"${SIUTE_NAME}\""
+echo -e "\nstarting \"${SUITE_NAME}\""
 
 assert "print_msg 'xxx'" \
 "STARTED\nMSG=xxx\nDONE"
@@ -65,6 +65,6 @@ assert "log 'example debug msg' 'DEBUG' 'ADDITIONAL_PARAM'" \
 
 
 #end test suite
-echo -e "\ndone ${SIUTE_NAME}"
-assert_end \"${SIUTE_NAME}\"
+echo -e "\ndone ${SUITE_NAME}"
+assert_end \"${SUITE_NAME}\"
 
