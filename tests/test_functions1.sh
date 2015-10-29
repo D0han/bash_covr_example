@@ -3,7 +3,7 @@
 
 
 readonly SRC_FILE="functions1.sh"
-readonly SIUTE_NAME="${SRC_FILE} test siute"
+readonly SIUTE_NAME="test_${SRC_FILE} test siute"
 
 #source bash test framework
 . assert.sh
@@ -32,17 +32,17 @@ assert_raises "print_msg 'abc'" \
 skip assert_raises "print_msg '\n'" \
 ???
 
-assert "file_stats 'test_data/functions1/file_stats/file01.txt'" \
-"test_data/functions1/file_stats/file01.txt stats:\nlines: 3\nsize: 10 (bytes)"
+assert "file_stats 'input_test_data/functions1/file_stats/file01.txt'" \
+"input_test_data/functions1/file_stats/file01.txt stats:\nlines: 3\nsize: 10 (bytes)"
 
-assert "file_stats 'test_data/functions1/file_stats/file02.txt'" \
-"test_data/functions1/file_stats/file02.txt stats:\nlines: 0\nsize: 0 (bytes)"
+assert "file_stats 'input_test_data/functions1/file_stats/file02.txt'" \
+"input_test_data/functions1/file_stats/file02.txt stats:\nlines: 0\nsize: 0 (bytes)"
 
-assert "file_stats 'test_data/functions1/file_stats/file03.txt'" \
-"test_data/functions1/file_stats/file03.txt stats:\nlines: 1\nsize: 1 (bytes)"
+assert "file_stats 'input_test_data/functions1/file_stats/file03.txt'" \
+"input_test_data/functions1/file_stats/file03.txt stats:\nlines: 1\nsize: 1 (bytes)"
 
-assert "file_stats 'test_data/functions1/file_stats/file04.txt'" \
-"test_data/functions1/file_stats/file04.txt stats:\nlines: 11\nsize: 45 (bytes)"
+assert "file_stats 'input_test_data/functions1/file_stats/file04.txt'" \
+"input_test_data/functions1/file_stats/file04.txt stats:\nlines: 11\nsize: 45 (bytes)"
 
 assert "log 'example debug msg' 'DEBUG'" \
 "DEBUG: MSG=example debug msg"
