@@ -32,17 +32,17 @@ assert_raises "print_msg 'abc'" \
 skip assert_raises "print_msg '\n'" \
 ???
 
-assert "file_stats 'input_test_data/functions1/file_stats/file01.txt'" \
-"input_test_data/functions1/file_stats/file01.txt stats:\nlines: 3\nsize: 10 (bytes)"
+assert "file_stats 'test_data/functions1/file_stats/file01.txt'" \
+"test_data/functions1/file_stats/file01.txt stats:\nlines: 3\nsize: 10 (bytes)"
 
-assert "file_stats 'input_test_data/functions1/file_stats/file02.txt'" \
-"input_test_data/functions1/file_stats/file02.txt stats:\nlines: 0\nsize: 0 (bytes)"
+assert "file_stats 'test_data/functions1/file_stats/file02.txt'" \
+"test_data/functions1/file_stats/file02.txt stats:\nlines: 0\nsize: 0 (bytes)"
 
-assert "file_stats 'input_test_data/functions1/file_stats/file03.txt'" \
-"input_test_data/functions1/file_stats/file03.txt stats:\nlines: 1\nsize: 1 (bytes)"
+assert "file_stats 'test_data/functions1/file_stats/file03.txt'" \
+"test_data/functions1/file_stats/file03.txt stats:\nlines: 1\nsize: 1 (bytes)"
 
-assert "file_stats 'input_test_data/functions1/file_stats/file04.txt'" \
-"input_test_data/functions1/file_stats/file04.txt stats:\nlines: 11\nsize: 45 (bytes)"
+assert "file_stats 'test_data/functions1/file_stats/file04.txt'" \
+"test_data/functions1/file_stats/file04.txt stats:\nlines: 11\nsize: 45 (bytes)"
 
 assert "log 'example debug msg' 'DEBUG'" \
 "DEBUG: MSG=example debug msg"
@@ -50,7 +50,8 @@ assert "log 'example debug msg' 'DEBUG'" \
 assert "log 'example warning msg' 'WARNING'" \
 "\x1b[01;93mWARNING:\x1b[0m MSG=example warning msg"
 
-assert "log 'example error msg' 'ERROR' 2>stderr.log ; cat stderr.log" \
+LOG=test_data/functions1/log/stderr.log
+assert "log 'example error msg' 'ERROR' 2>${LOG} ; cat ${LOG}" \
 "\x1b[31mERROR:\x1b[0m MSG=example error msg"
 
 assert "log 'testing unsupported debug param' 'CRITICAL'" \
