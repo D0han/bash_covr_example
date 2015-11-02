@@ -4,6 +4,7 @@ todo:
 - src: assert.sh skip_if example
 - src: tests for env variables
 - src: tests for nested scripts
+- src: tests for sourcing configuration files
 - src: cli parser example
 - src: license file is missing as well
 - doc: all
