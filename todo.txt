@@ -1,6 +1,6 @@
 todo:
+- src: handling stderr and stdout at the same time
 - src: extracting merged coverage results 
-- src: handling stderr
 - src: assert.sh skip_if example
 - src: tests for env variables
 - src: tests for nested scripts
@@ -17,4 +17,5 @@ done:
 + src: more advanced travis-ci support
 + src: assert.sh skip example
 + src: some readme file is missing
++ src: handling stderr
 

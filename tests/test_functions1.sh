@@ -50,7 +50,7 @@ assert "log 'example debug msg' 'DEBUG'" \
 assert "log 'example warning msg' 'WARNING'" \
 "\x1b[01;93mWARNING:\x1b[0m MSG=example warning msg"
 
-assert "log 'example error msg' 'ERROR'" \
+assert "log 'example error msg' 'ERROR' 2>stderr.log ; cat stderr.log" \
 "\x1b[31mERROR:\x1b[0m MSG=example error msg"
 
 assert "log 'testing unsupported debug param' 'CRITICAL'" \

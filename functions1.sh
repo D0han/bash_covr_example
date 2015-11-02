@@ -22,7 +22,7 @@ function log() {
     elif [ "${DEBUG}" = "WARNING" ] ; then
         echo -e "\x1b[01;93mWARNING:\x1b[0m MSG=${MSG}"
     elif [ "${DEBUG}" = "ERROR" ] ; then
-        echo -e "\x1b[31mERROR:\x1b[0m MSG=${MSG}"
+        echo -e "\x1b[31mERROR:\x1b[0m MSG=${MSG}" >&2
     else
         echo "error! unsupported value for DEBUG param: DEBUG=\"${DEBUG}\""
         return 1
