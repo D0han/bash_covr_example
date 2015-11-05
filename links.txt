@@ -1,4 +1,5 @@
 http://www.shellcheck.net
+https://en.wikipedia.org/wiki/Zlib_License
 https://github.com/SimonKagstrom/kcov
 https://github.com/lehmannro/assert.sh
 https://google-styleguide.googlecode.com/svn/trunk/shell.xml

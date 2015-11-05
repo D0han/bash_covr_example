@@ -6,7 +6,7 @@ todo:
 - src: tests for nested scripts
 - src: tests for sourcing configuration files
 - src: cli parser example
-- src: license file is missing as well
+- src: generate all mocks with mockmaker (by D0han)
 - doc: all
 - doc: how to browse merged coverage results
 
@@ -19,4 +19,5 @@ done:
 + src: assert.sh skip example
 + src: some readme file is missing
 + src: handling stderr
++ src: license file is missing as well
 
