@@ -1,5 +1,5 @@
 tests/assert.sh
-tests/test_data/functions1/log/stderr.log
+tests/coverage_results/
 tests/kcov/kcov
-tests/results/
+tests/test_data/functions1/log/stderr.log
 
