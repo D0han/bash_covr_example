@@ -1,4 +1,5 @@
 tests/assert.sh
+tests/test_data/functions1/log/stderr.log
 tests/kcov/kcov
 tests/results/
 
