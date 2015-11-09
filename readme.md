@@ -21,18 +21,18 @@ Dependencies
 All required dependencies:
 
 1. linux box (obviously)
-2. bash
-3. kcov (either installed widely in your system or placed inside tests/kcov/ dir)
+2. **bash**
+3. **kcov** (either installed widely in your system or placed inside **tests/kcov/** dir)
 
 Optional dependencies:
 
-1. assert.sh v1.1 framework (scripts can fetch it from github directly)
+1. **assert.sh** (v1.1) framework (scripts can fetch it from github directly)
 
 
 Installing and running
 ======================
 
-If you have **kcov** already installed in your system it's enough to launch run_tests.sh and count_coverage.sh scripts to see how tests are being executed and how code coverage is measured. If not availanle bash test framework **assert.sh** will be downloaded automatically into tests/ dir.
+If you have **kcov** tool already installed in your system it's enough to launch **run_tests.sh** and **count_coverage.sh** scripts to see how tests are being executed and how code coverage is measured. If not available bash test framework **assert.sh** will be downloaded automatically into **tests/** dir.
 
 
 --
