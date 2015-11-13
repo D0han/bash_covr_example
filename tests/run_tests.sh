@@ -14,7 +14,7 @@ fi
 
 echo "starting tests, please wait..."
 time {
-    for f in test_functions1.sh test_functions2.sh test_script1.sh ; do
+    for f in test_functions1.sh test_functions2.sh test_script1.sh test_shellcheck.sh ; do
         ./${f} --stop --verbose
 
         if [ $? -ne 0 ] ; then
