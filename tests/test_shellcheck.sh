@@ -1,5 +1,5 @@
 #!/bin/bash
 
 GLOBIGNORE=assert.sh
-shellcheck *.sh ../*.sh
+shellcheck ./*.sh ../*.sh
 
